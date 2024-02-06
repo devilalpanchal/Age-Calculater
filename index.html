@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <title>JavaScript Questions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <section class="dob">
-        <form action="">
 
-            <h1>Age Calculator</h1>
-            <div class="div1">
-                <label for="dob"> Date of birth</label>
-                <input type="date" id="date">
-            </div>
-            <div class="div2"> <label for="Currentdate"> Current Date</label>
-                <input type="date" id="currentdate">
-            </div>
-
-            <button type="button" onclick="calAge()" class="btn">Submit</button>
-        </form>
-
-        <div class="result">
+   
+<section class="dob-container">
+    <form action="">
+        <h1>age Calculator</h1>
+        <div class="input-container">
+ <label for="dob">Date of birth</label>
+    <input type="date" id="dob" class="dob">
         </div>
-    </section>
-    <script src="main.js"></script>
-</body>
+   <div class="input-container">
+ <label for="currentDate">Current Date</label>
+    <input type="date"  id="currentDate">
+   </div>
+   
+    <button type="button" onclick="calcAge()">Submit</button>
+</form>
 
+
+<div class="result">
+    
+</div>
+
+</section>
+
+
+
+    
+
+<script src="main.js"></script>
+  
+
+    </script>
+</body>
 </html>
