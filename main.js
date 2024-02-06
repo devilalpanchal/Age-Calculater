@@ -1,85 +1,190 @@
-// console.log('hello')
+// console.log(btn)
 
-function calcAge() {
-  
-  const dob = document.querySelector('#dob')//reading the dob input
-  // console.log(dob.value)
-  let dobValue = dob.value//getting the value of dob
-  console.log(dobValue)
+// console.log(date)
 
-  let currentDate = document.querySelector('#currentDate')//reading input of current date
-  // console.log(currentDate)
-  let currentDateValue = currentDate.value//getting the vlaue of current date
-  console.log(currentDateValue)
+btn.addEventListener('click',()=>{
+    let currentDate=new Date();
+    let currentYear=currentDate.getFullYear()
+    let currentMonth=currentDate.getMonth()
+    let currentDay=currentDate.getDate()
+    // console.log(currentYear)
+    // console.log(currentMonth)
+    // console.log(currentDay)
 
-  const getDob = new Date(dobValue)//get deatils of dob
-  let dobYear = getDob.getFullYear()//get year of dob
-  console.log(dobYear)
-  let dobMonth = getDob.getMonth()//get month of dob
-  console.log(dobMonth)
-  let dobDate = getDob.getDate()//get date of dob
-  console.log(dobDate)
+    const value=date.value
+    // console.log(value)
+    let dob=new Date(value)
+    // console.log(dob)
+    let dobYear=dob.getFullYear()
+    let dobMonth=dob.getMonth()
+    let dobDay=dob.getDate()
+console.log(dobYear)
+console.log(dobMonth)
+console.log(dobDay)
+console.log('hello')
 
-  // console.log(getDob)
-  const getCurrentDate = new Date(currentDateValue)//get details of current date
-  let currentYear = getCurrentDate.getFullYear()
-  let currentMonth = getCurrentDate.getMonth()
-  let currentDay = getCurrentDate.getDate()
-
-  console.log(currentYear)
-  console.log(currentMonth)
-  console.log(currentDay)
-
-  let yearGap = currentYear - dobYear//calculation of year gap
-  // 6 7 2001
-  // 1 2 2024
-  // 23;
-  // -5
-  // 2024-2001=23
-  // 2-7=-5
-  // 7-2=5
-
-  // logic of getting month gap and date gap
-  let monthGap
-  let dateGap
-  if (currentMonth >= dobMonth) {
-    monthGap = currentMonth - dobMonth
-  } else {
-    yearGap--
+    let yearGap=currentYear-dobYear
+    console.log(yearGap)
+let monthGap;
+ let dayGap;
+if(currentMonth>=dobMonth){//1//5
+    monthGap=currentMonth-dobMonth
+}else{
+    yearGap--;
     monthGap = 12 + currentMonth - dobMonth
-  }
+}
+}
+// if(currentDay>=dobDay){
+//     dayGap=currentDay-dobDay
+// }else{
+//     monthGap--;
+// dayGap = 31 + currentDay - dobDay
+// }
 
-  if (currentDay >= dobDate) {
-    dateGap = currentDay - dobDate
-  } else {
-    monthGap--
-    dateGap = 31 + currentDay - dobDate
-    if(monthGap<=0){
-        monthGap=11;
-        yearGap--;
-    }
-  }
-
-// console.log(yearGap)
+// let monthGap=currentMonth-dobMonth
 // console.log(monthGap)
-// console.log(dateGap)
-//creating a object of age gap
-let ageGap={
-year:yearGap,
-month:monthGap,
-date:dateGap
+// let dayGap=currentDay-dobDay
+// console.log(dayGap)
 
-}
-console.log(ageGap)
+// })
 
-let result=document.querySelector('.result')//reading the result container
-console.log(result)
+// const currentDate=new Date();
+// console.log(currentDate)
+// let year=currentDate.getFullYear()
+// let month=currentDate.getMonth()
+// let hours=currentDate.getHours()
+// let day=currentDate.getDay()
+// console.log(year)
+// console.log(month+1)
+// console.log(hours)
+// console.log(day)
 
-result.innerHTML=`You are ${ageGap.year} years and ${ageGap.month} months and ${ageGap.date} days old  `//showing the result in the container
+// const currentDate = new Date("2023-03-15")
+// console.log(currentDate)
+// console.log(currentDate.getFullYear())
+
+// // write a function to reverse a order of sentence
+
+// // let str='yogesh is not solving javascript problem';
+// // let str2='Devilal is solving javascript problem';
+
+// // let strArr=str.split(' ');
+// // console.log(strArr)
+// // let revArr=strArr.reverse()
+// // console.log(revArr)
+// // let result=revArr.join(" ")
+// // console.log(result)
+// // function revString(str){
+// //   let result = str.split(' ').reverse().join(' ')
+// //   console.log(result)
+
+// // }
+// // revString(str2)
+
+// let arr = [3, 4, 56, [34, 43, 53], 65, 73]
+
+// // let array2=arr.flat()
+// // console.log(array2)
+
+// // let result=Math.max(...array2)
+// // console.log(result)
+// // function findLargest(arr){
+// //   //arr=[3, 4, 56, [34, 43, 53], 65, 737]
+// //   let array2 = arr.flat() //[3, 4, 56, ,34, 43, 53, 65, 737]
+
+// //   let result = Math.max(...array2)
+// //   console.log(result)
+// // }
+
+// // findLargest(arr)
+// // function findLargest(nestedArray){
+// // // let largestELement = Number.NEGATIVE_INFINITY
+// // // for (let i = 0; i < nestedArray.length; i++) {
+// // //   for (let j = 0; j < nestedArray[i].length; j++) {
+// // //     if (nestedArray[i][j] > largestELement) {
+// // //       largestELement = nestedArray[i][j]
+// // //     }
+// // //   }
+
+// // //   // console.log(largestELement)
+// // // }
+// // // console.log(largestELement)
+// // }
+// // findLargest(arr)
+
+// // 0 ,1 1 2 3 5 8 13
+
+// // a=0//1//1
+// // b=1//1//2
+// // c=a+b//2//3
+// // let arr=[0,1]
+
+
+// // function fib(n) {
+//   //     let arr = [0, 1]
+
+//   // for(let i=2;i<n;i++){
+
+//   //     arr[i]=arr[i-1]+arr[i-2]
+
+//   // }
+//   // return arr
+
+// //   let result=[]
+
+// //   let a = 0
+// //   let b = 1
+// //   console.log(a)
+// //   result.push(a)
+// //   result.push(b)
+// //   console.log(b)
+// //   for (let i = 2; i <= n; i++) {
+// //     let c = a + b
+
+// //     a = b
+// //     b = c
+// //     if (c <= n) {
+// //         result.push(c)
+// //       console.log(c)
+// //     }
+// //   }
+// //   console.log(result)
+// // }
+
+// // fib(505)
+// // // console.log(fib(50))
+
+// // function checkPrime(n){
+
+// //     if(n<=1) return false
+// //     for(let i=2;i<Math.sqrt(n);i++){
+// //         if(n%i==0){
+// //             return false
+// //         }
+// //     }
+// // return true
+// // }
+
+// // console.log(checkPrime(7))
+
+
+// // let num=31
+// // console.log(Math.sqrt(num))
 
 
 
+// const inputContainer=document.getElementsByClassName('input')
+// inputContainer = {
+//   type: 'text',
+//   class: 'input',
+//   name: 'input',
+//   placeholder: 'type a text',
+// }
+// console.log(inputContainer)
 
 
-  // console.log(getCurrentDate)
-}
+// // const main=document.getElementById('main')
+
+// console.log(main.className)
+// const container=document.getElementsByTagName('div')
+// console.log(container)
